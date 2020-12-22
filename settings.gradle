@@ -1,2 +1,25 @@
 rootProject.name = "ComponentJetpackDemo"
+
+// demo库
 include ':app'
+
+// 业务库
+
+// lib库
+include ':libs:base'
+//include_project ':base',  'libs/base'
+
+// 工具库
+include_project ':lint',  'tools/lint'
+include_project ':dellog', 'plugins/dellog'
+
+def include_project(String name, String path) {
+    def project_dir = new File(settingsDir, path)
+    if (!project_dir.exists()) {
+        throw new IllegalArgumentException("project name " + name + ", project path: " + path + " not exit")
+    }
+    include(name)
+    project(name).projectDir = project_dir
+}
+
+

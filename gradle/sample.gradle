@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+apply from: rootProject.projectDir.absolutePath + "/gradle/basic.gradle"
+
+android {
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationDemoBaseId + project.getName().replace("_", "").toLowerCase()
+
+        // multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+    resourcePrefix ""
+
+}
+
+dependencies {
+
+    // Test
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

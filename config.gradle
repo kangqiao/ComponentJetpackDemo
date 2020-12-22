@@ -1,0 +1,44 @@
+
+ext.kotlin_version = "1.4.21"
+ext.nav_version = "2.3.2"
+ext.compose_version = '1.0.0-alpha09'
+
+ext.android = [
+        applicationDemoBaseId: "com.zp.androidx.",
+        compileSdkVersion    : 30,
+        buildToolsVersion    : "30.0.3",
+        minSdkVersion        : 23,
+        targetSdkVersion     : 30,
+        versionCode          : 1000,
+        versionName          : "1.0.00"
+]
+
+//定义第三方库的版本号
+
+
+String storageUrl = System.env.FLUTTER_STORAGE_BASE_URL ?: "https://storage.googleapis.com"
+//自定义函数
+def addRepos(RepositoryHandler handler) {
+
+//    maven {
+//        url '/Users/zhaopan/workspace/ComponentXDemo/flutter_module/build/host/outputs/repo'
+//    }
+//    maven {
+//        url uri("$storageUrl/download.flutter.io")
+//    }
+
+    handler.maven { url 'http://dl.bintray.com/kotlin/kotlin-eap' }
+
+    handler.maven { url 'https://maven.aliyun.com/repository/releases' }
+    handler.maven { url 'https://maven.aliyun.com/repository/google' }
+    handler.maven { url 'https://maven.aliyun.com/repository/jcenter' }
+
+    handler.mavenCentral()
+    handler.maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    handler.maven { url 'https://jitpack.io' }
+
+    handler.google()
+    handler.jcenter()
+}
+
+ext.addRepos = this.&addRepos

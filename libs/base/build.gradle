@@ -1,0 +1,16 @@
+apply from: rootProject.projectDir.absolutePath + "/gradle/libary.gradle"
+
+android {
+
+    defaultConfig {
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+}
+
+dependencies {
+
+
+}

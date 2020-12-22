@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+apply from: rootProject.projectDir.absolutePath + "/gradle/basic.gradle"
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
+android {
+    defaultConfig {
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    resourcePrefix project.getName() + "_"
+}
+
+dependencies {
+
+}
