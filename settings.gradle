@@ -6,7 +6,7 @@ include ':app'
 // 业务库
 
 // lib库
-include ':libs:base'
+include ':libs:base', ':libs:fragivity'
 //include_project ':base',  'libs/base'
 
 // 工具库
