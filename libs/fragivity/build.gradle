@@ -12,8 +12,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode Integer.parseInt(FRAGIVITY_VERSION_CODE)
+        versionName FRAGIVITY_VERSION_NAME
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -35,7 +35,7 @@ android {
     }
     composeOptions {
         kotlinCompilerExtensionVersion compose_version
-        kotlinCompilerVersion '1.4.21'
+        kotlinCompilerVersion '1.4.30'
     }
 
 }
@@ -83,7 +83,7 @@ uploadArchives {
             //设置插件的GAV参数
             pom.groupId = 'com.github.fragivity'
             pom.artifactId = 'core'
-            pom.version = '0.1.1'
+            pom.version = FRAGIVITY_VERSION_NAME
             //文件发布到下面目录
             repository(url: uri('../../repo'))
         }

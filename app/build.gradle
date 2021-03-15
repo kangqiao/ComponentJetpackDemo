@@ -24,5 +24,6 @@ android {
 dependencies {
 
     implementation project(':libs:base')
-    implementation 'com.github.fragivity:core:0.1.1'
+    implementation project(':libs:fragivity')
+    //implementation 'com.github.fragivity:core:1.0.0'
 }

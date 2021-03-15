@@ -1,7 +1,7 @@
 
-ext.kotlin_version = "1.4.21"
-ext.nav_version = "2.3.2"
-ext.compose_version = '1.0.0-alpha09'
+ext.kotlin_version = "1.4.30"
+ext.nav_version = "2.3.4"
+ext.compose_version = '1.0.0-beta01'
 
 ext.android = [
         applicationDemoBaseId: "com.zp.androidx.",

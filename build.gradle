@@ -9,9 +9,10 @@ buildscript {
         }
         google()
         jcenter()
+        mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:7.0.0-alpha04"
+        classpath 'com.android.tools.build:gradle:7.0.0-alpha09'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
@@ -33,6 +34,7 @@ allprojects {
         }
         google()
         jcenter()
+        mavenCentral()
     }
 
     // 设置各子项目的build目录统一到rootProject下的build目录中
