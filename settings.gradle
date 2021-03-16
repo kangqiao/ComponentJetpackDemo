@@ -10,6 +10,7 @@ rootProject.name = "ComponentJetpackDemo"
 
 // demo库
 include ':app'
+include ':compose'
 
 // 业务库
 
