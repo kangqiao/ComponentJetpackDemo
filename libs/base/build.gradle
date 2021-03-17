@@ -11,6 +11,7 @@ android {
 }
 
 dependencies {
-
+    // 安卓Utils
+    api 'com.blankj:utilcode:1.30.0'
 
 }
